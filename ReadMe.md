@@ -50,7 +50,7 @@ In a modern busy lifestyle, users often spend time doing simple tasks that can b
 ## Flowchart
 
 ### User Flow:
-![User Flow](/PlanningFiles/UserFlowChartP2_002.PNG)
+![User Flow](/PlanningFiles/UserFlowChartP2_003.PNG)
 
 ### Automation Flow
 ![Automation Flow](/PlanningFiles/AutomationFlowChartP2_002.PNG)
