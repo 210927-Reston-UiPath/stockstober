@@ -26,17 +26,17 @@ In a modern busy lifestyle, users often spend time doing simple tasks that can b
 ## MVP Features:
 - Robot maintains:
 	* Stock Portfolio
-Stock Recommendation List
-Stock News List
+	* Stock Recommendation List
+	* Stock News List
 - Robot Buys, Sells, Keeps stock based on:
-Stock Portfolio
-Stock Recommendation List
-Stock News List
+	* Stock Portfolio
+	* Stock Recommendation List
+	* Stock News List
 - Robot formatted (with PDF or Excel) emails to the Client info such as:
-Stock Portfolio
-Stock Recommendations
-Stocks News List
-… Report
+	* Stock Portfolio
+	* Stock Recommendations
+	* Stocks News List
+	* … Report
 - Datatables are stored in PostgreSQL Database.
 
 ## Stretch Goals:
