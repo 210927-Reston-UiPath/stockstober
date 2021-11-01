@@ -37,7 +37,6 @@ In a modern busy lifestyle, users often spend time doing simple tasks that can b
 	* Stock Recommendations
 	* Stocks News List
 	* … Report
-- Datatables are stored in PostgreSQL Database.
 
 ## Stretch Goals:
 - Currencies can also be traded like the stocks.
@@ -54,5 +53,15 @@ In a modern busy lifestyle, users often spend time doing simple tasks that can b
 
 ### Automation Flow
 ![Automation Flow](/PlanningFiles/AutomationFlowChartP2_002.PNG)
+
+
+## Constraints:
+- WHICH WEBSITES ARE WE READING STOCK DATA FROM?
+- WHICH WEBSITES ARE WE USING FOR NEWS RECOMMENDATION?
+- WHAT SOURCE APPLICATION ARE WE USING FOR THE ROBOT TO BUY/SELL/KEEP STOCKS?
+
+## Database Design
+- Datatables are stored in PostgreSQL Database.
+- WHAT ARE THE TABLES WE USING?
 
 
