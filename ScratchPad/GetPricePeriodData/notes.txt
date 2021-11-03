@@ -1,0 +1,15 @@
+MOVING AVERAGE 50 DAY 
+MOVING AVERAGE 100 DAY 
+PRICE CHANGE 50 DAY 
+PRICE CHANGE 100 DAY 
+MACD OSCILLATOR 50 DAY 
+MACD OSCILLATOR 100 DAY
+
+movingAvg50Day
+movingAvg100Day
+priceChange50Day
+priceChange100Day
+macdOscillator50Day
+macdOscillator100Day
+
+url = "https://www.barchart.com/stocks/quotes/{{tickerSymbol}}/technical-analysis"
