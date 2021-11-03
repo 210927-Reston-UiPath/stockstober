@@ -1,0 +1,14 @@
+Name			Ticker Symbol
+------------------------------------
+Apple			AAPL
+Tesla			TSLA
+Microsoft		MSFT
+Sony			SONY
+Nintendo		NTDOY
+Occulus			OVTZ
+GameStop		GME
+Virgin Galactic		SPCE
+TMobile			TMUS
+Honda			HMC
+Toyota			TM
+Boeing			BA
