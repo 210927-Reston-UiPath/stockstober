@@ -1,11 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetHistoricalPrices" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetHistoricalPrices" this:GetHistoricalPrices.tickerSymbol="MSFT" this:GetHistoricalPrices.downloadPath="Downloads\History{0}.csv" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="dt" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="tickerSymbol" Type="InArgument(x:String)" />
+    <x:Property Name="downloadPath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>639,898</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>639,858</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetHistoricalPrices_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -81,12 +83,6 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="log" />
       <Variable x:TypeArguments="x:String" Default="https://query1.finance.yahoo.com/v7/finance/download/{0}?period1=1604355152&amp;period2=1635887552&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true" Name="url" />
-      <Variable x:TypeArguments="x:String" Default="MSFT" Name="tickerSymbol" />
-      <Variable x:TypeArguments="x:String" Name="downloadPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Downloads\History{0}.csv</Literal>
-        </Variable.Default>
-      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
