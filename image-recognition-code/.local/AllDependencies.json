@@ -1170,15 +1170,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hahme\\.nuget\\packages\\": {}
+    "C:\\Users\\mibax\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "FaceRecognition",
       "projectName": "FaceRecognition",
-      "projectPath": "C:\\Raveture\\hbksilver-code\\.local",
-      "packagesPath": "C:\\Users\\hahme\\.nuget\\packages\\",
-      "outputPath": "C:\\Raveture\\hbksilver-code\\.local"
+      "projectPath": "C:\\Revature\\Project2\\stockstober\\image-recognition-code\\.local",
+      "packagesPath": "C:\\Users\\mibax\\.nuget\\packages\\",
+      "outputPath": "C:\\Revature\\Project2\\stockstober\\image-recognition-code\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1206,5 +1206,56 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Caliburn.Micro.Core 3.0.1' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Caliburn.Micro.Core"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpZipLib 0.86.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "SharpZipLib"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Caliburn.Micro 3.0.1' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Caliburn.Micro"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Extended.Wpf.Toolkit 2.8' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Extended.Wpf.Toolkit"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Rest.ClientRuntime 2.3.10' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Microsoft.Rest.ClientRuntime"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NPOI 2.2.1' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "NPOI"
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json 10.0.3' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "Newtonsoft.Json"
+    }
+  ]
 }

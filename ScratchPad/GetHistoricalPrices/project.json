@@ -3,10 +3,11 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.9.5]",
+    "KanadCharting.Activities": "[1.0.0]",
+    "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.System.Activities": "[20.10.4]",
-    "UiPath.UIAutomation.Activities": "[20.10.9]",
+    "UiPath.UIAutomation.Activities": "[21.10.3]",
     "UiPath.WebAPI.Activities": "[1.9.2]"
   },
   "webServices": [],
