@@ -1,0 +1,30 @@
+Clients
+---
+id SERIAL PK,
+firstName VARCHAR(30),
+lastName VARCHAR(30),
+email VARCHAR(30),
+phoneNumber VARCHAR(30)
+
+Stocks
+---
+id SERIAL PK,
+tickerSymbol VARCHAR(30)
+price DOUBLE PRECISION
+rsi DOUBLE PRECISION,
+dividend DOUBLE PRECISION,
+range DOUBLE PRECISION,
+
+Portfolio
+---
+id SERIAL PK,
+clientId INTEGER FK,
+stockId INTEGER FK,
+quantity INTEGER,
+
+
+
+|id	|clientId	| rsi	|tickerSymbol
+|1	|1		|0.7	|TSLA
+|2	|1		|0.4	|MSFT
+|3	|2		|0.7	|TSLA

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="577,519" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="661,519" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -69,28 +69,16 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetHistoricalPrices workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetHistoricalPrices.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="tickerSymbol">
-          <Literal x:TypeArguments="x:String">MSFT</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="downloadPath">
-          <Literal x:TypeArguments="x:String">Downloads\History{0}.csv</Literal>
-        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt">[dt]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="tickerSymbol">MSFT</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="downloadPath">Downloads\History{0}.csv</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GenerateHistoricalPricesChart workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GenerateHistoricalPricesChart.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="dt">
-          <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="tickerSymbol">
-          <Literal x:TypeArguments="x:String">MSFT</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="downloadPath">
-          <Literal x:TypeArguments="x:String">Downloads/priceHistoryChart_{0}.png</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="dt">[dt]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="tickerSymbol">MSFT</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="downloadPath">Downloads/priceHistoryChart_{0}.png</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
