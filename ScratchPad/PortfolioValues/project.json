@@ -4,6 +4,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "NewsAPI": "[0.6.0]",
+    "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.System.Activities": "[20.10.4]",
