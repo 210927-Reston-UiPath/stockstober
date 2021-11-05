@@ -1,5 +1,28 @@
 {
-  "version": 1,
-  "dgSpecHash": "NP2BHKDWyTPwp5l9QIe8ujtRJs2wHt9mJtgwFsNG+V74kaiQuhj19bKm0tOShWugcsA4/BBpduQ2YtJf7Fva4g==",
-  "success": true
+  "version": 2,
+  "dgSpecHash": "iDclxS1pmzu9x3THdnndDZ5dvG3oNC0cmhHZ7SrN4/ORnDZ5nwXbmiSaOK0/HQspz5kVLjQhQg1ZHFQhx1JNTQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hahme\\Documents\\revature\\hbksilver-code\\image-recognition-code\\.local\\",
+  "expectedPackageFiles": [
+    "C:\\Users\\hahme\\.nuget\\packages\\avalonedit\\5.0.3\\avalonedit.5.0.3.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\caliburn.micro\\3.0.1\\caliburn.micro.3.0.1.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\caliburn.micro.core\\3.0.1\\caliburn.micro.core.3.0.1.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\csvhelper\\2.13.5\\csvhelper.2.13.5.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\extended.wpf.toolkit.2.8.0.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\humanizer.core\\2.4.2\\humanizer.core.2.4.2.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.10\\microsoft.rest.clientruntime.2.3.10.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071\\microsoft.visualstudio.ole.interop.7.10.6071.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\npoi\\2.2.1\\npoi.2.2.1.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\sharpziplib\\0.86.0\\sharpziplib.0.86.0.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath\\10.0.6929.25268\\uipath.10.0.6929.25268.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath.excel.activities\\2.5.0\\uipath.excel.activities.2.5.0.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath.python.activities\\1.4.1\\uipath.python.activities.1.4.1.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath.system.activities\\18.4.2\\uipath.system.activities.18.4.2.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath.uiautomation.activities\\18.4.3\\uipath.uiautomation.activities.18.4.3.nupkg.sha512",
+    "C:\\Users\\hahme\\.nuget\\packages\\uipath.vision\\1.2.0\\uipath.vision.1.2.0.nupkg.sha512"
+  ],
+  "logs": []
 }
