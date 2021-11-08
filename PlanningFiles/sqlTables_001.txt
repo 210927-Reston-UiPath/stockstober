@@ -23,7 +23,8 @@ password VARCHAR(30)
 ## Stocks
 ---
 id SERIAL PK,
-tickerSymbol VARCHAR(30)
+tickerSymbol VARCHAR(30),
+name VARCHAR(30)
 
 - ^ Prefill with with info in Recommendations Source (Yahoo?) and Portfolio in Investopedia 
 
@@ -61,3 +62,9 @@ clientID INTEGER FK REFERENCES Clients.id,
 stockId INTEGER FK REFERENCES Stocks.id
 
 - ^ Prefill with with info in Recommendations Source (Yahoo?)
+
+----------------------------------------------------------
+
+Investopedia Login:
+"traintrainerston@gmail.com"
+password = "123Stocks"
