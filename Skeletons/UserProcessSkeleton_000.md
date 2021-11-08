@@ -1,4 +1,4 @@
-- starts in an (Not Logged In) state.
+### Initial State (Not Logged In).
 	* contains workflow(s) for image recognition
 	* contains workflow(s) for Login
 		- returns the out arguments: out_clientId (Int32) and a out_success (Boolean)

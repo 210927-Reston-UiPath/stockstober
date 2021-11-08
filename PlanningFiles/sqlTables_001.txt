@@ -46,7 +46,7 @@ stocticker VARCHAR(30),
 
 - Example:
 ```
-insert into Stocks(name, tickerSymbol) values 
+insert into Stocks(stockname, stocticker) values 
 ('Apple','AAPL'),
 ('Tesla','TSLA') ,
 ('Microsoft','MSFT'),
