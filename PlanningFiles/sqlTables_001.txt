@@ -1,4 +1,4 @@
-## Clients
+## Clients [CREATED & FILLED]
 ----------------------------------------------------------
 id SERIAL PK,
 firstName VARCHAR(30),
@@ -10,7 +10,7 @@ phoneNumber VARCHAR(30)
 
 ----------------------------------------------------------
 
-## ClientAccounts
+## ClientAccounts [CREATED & FILLED]
 ---
 clientId INTEGER FK REFERENCES Clients.id,
 username VARCHAR(30)
@@ -18,19 +18,67 @@ password VARCHAR(30)
 
 - ^ Prefill with one default client with clientId = x, x=1.
 
+- CREATE:
+```
+create table ClientAccounts(
+	clientId INTEGER REFERENCES Clients(id),
+	username VARCHAR(30),
+	password VARCHAR(30)
+);
+```
+
+- INSERT:
+```
+insert into ClientAccounts (clientId, username, password)
+values
+	(1, 'USERNAME', 'PASSWORD');
+```
 ----------------------------------------------------------
 
-## Stocks
+## Stocks [CREATED & FILLED]
 ---
 id SERIAL PK,
-tickerSymbol VARCHAR(30),
-name VARCHAR(30)
+stockname VARCHAR(30),
+stocticker VARCHAR(30),
+
 
 - ^ Prefill with with info in Recommendations Source (Yahoo?) and Portfolio in Investopedia 
 
+- Example:
+```
+insert into Stocks(name, tickerSymbol) values 
+('Apple','AAPL'),
+('Tesla','TSLA') ,
+('Microsoft','MSFT'),
+('Sony','SONY') ,
+('GameStop','GME'),
+('Virgin Galactic','SPCE'),
+('Honda','HMC') ,
+('Toyota','TM'),
+('Boeing','BA'),
+('Google', 'GOOG'),
+('Facebook', 'FB')
+
+```
+
+- Current data:
+```
+1	Apple 	AAPL
+2	Tesla 	TSLA
+3	Microsoft 	MSFT
+4	Sony 	SONY
+5	GameStop 	GME
+6	Virgin Galactic 	SPCE
+7	Honda 	HMC
+8	Toyota 	TM
+9	Boeing 	BA 
+10	Google 	GOOG
+11	Facebook 	FB 
+```
+
 ----------------------------------------------------------
 
-## Portfolio
+## Portfolio [CREATED & FILLED]
 ---
 id SERIAL PK,
 clientId INTEGER FK REFERENCES Clients.id,
@@ -38,13 +86,38 @@ stockId INTEGER FK REFERENCES Stocks.id,
 quantity INTEGER
 
 - ^ Prefill with with info in Portfolio in Investopedia
+- None of the stocks in here should also be in the Recommendations table
+
+- CREATE:
+```
+create table Portfolio(
+	id serial primary key,
+	clientId integer references Clients(id),
+	stockId integer references Stocks(id),
+	quantity integer
+);
+```
+
+- INSERT:
+```
+insert into Portfolio (clientId, stockId, quantity) values
+(1, 1 ,  7),
+(1, 9,  5),
+(1, 5,  5),
+(1, 7,  35),
+(1, 3,   3),
+(1, 4,   8),
+(1, 6,   50),
+(1, 8,  6 ),
+(1, 2,   2)
+```
 
 ----------------------------------------------------------
 
-## PurchaseHistory
+## TradeHistory [CREATED & FILLED]
 ---
 id SERIAL PK,
-clientID INTEGER FK REFERENCES Clients.id,
+clientId INTEGER FK REFERENCES Clients.id,
 stockId INTEGER FK REFERENCES Stocks.id,
 quantity INTEGER,
 status VARCHAR(30),
@@ -53,15 +126,73 @@ purchasePrice DOUBLE PRECISION
 
 - ^ Prefill with with info in Purchase History in Investopedia
 
+- CREATE:
+```
+create table TradeHistory(
+	clientId integer references Clients(id),
+	stockId integer references Stocks(id),
+	quantity integer,
+	status varchar(30),
+	date varchar (10),
+	purchasePrice double precision
+);
+```
+
+- Example:
+```
+insert into TradeHistory (clientId, stockId, quantity, status, date, purchasePrice)
+values
+	(1 , 6 , 5 , 'bought', '2021-03-11', 19.59),
+	(1 , 5 , 5 , 'bought', '2021-03-11', 214.00),
+	(1 , 4 , 8 , 'bought', '2021-03-11', 123.00),
+	(1 , 3 , 3 , 'bought', '2021-03-11', 333.90),
+	(1 , 9 , 5 , 'bought', '2021-03-11', 211.47),
+	(1 , 8 , 6 , 'bought', '2021-03-11', 179.90),
+	(1 , 7 , 35 , 'bought', '2021-03-11', 30.24),
+	(1 , 2 , 2 , 'bought', '2021-03-11', 1177.33),
+	(1 , 1 , 7 , 'bought', '2021-03-11', 150.39),
+	(1 , 6 , 55 , 'bought', '2021-03-11', 19.51)
+
+```
+
+- RAW DATA:
+>>11/03/2021	SPCE	Market	5	$19.59	$97.95
+>>11/03/2021	GME	Market	5	$214.00	$1,070.00
+>>11/03/2021	SONY	Market	8	$123.00	$984.00
+>>11/03/2021	MSFT	Market	3	$333.90	$1,001.70
+>>11/03/2021	BA	Market	5	$211.47	$1,057.35
+>>11/03/2021	TM	Market	6	$179.90	$1,079.40
+>>11/03/2021	HMC	Market	35	$30.24	$1,058.40
+11/03/2021	TSLA	Market	2	$1,177.33	$2,354.66
+11/03/2021	AAPL	Market	7	$150.39	$1,052.73
+11/03/2021	SPCE	Market	55	$19.51	$1,073.05
+
 ----------------------------------------------------------
 
-## Recommendations
+## Recommendations [CREATED & FILLED]
 ---
 id SERIAL PK,
 clientID INTEGER FK REFERENCES Clients.id,
 stockId INTEGER FK REFERENCES Stocks.id
 
 - ^ Prefill with with info in Recommendations Source (Yahoo?)
+- None of the stocks in here should also be in the Portfolio table
+
+- Example:
+```
+insert into Recommendations (clientId, stockId)
+values
+	(1 , 10),
+	(1 , 11)
+```
+
+- CREATE:
+```
+create table Recommendations(
+	clientId INTEGER references Clients(id),
+	stockId integer referfences Stocks(id)
+);
+```
 
 ----------------------------------------------------------
 
