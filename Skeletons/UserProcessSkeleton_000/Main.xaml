@@ -145,7 +145,7 @@
                       <InArgument x:TypeArguments="x:Int32">1</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:Comment DisplayName="Invoke workflow: Login.xaml" sap:VirtualizedContainerService.HintSize="334,151" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Out args:&#xD;&#xA;&#xD;&#xA;out-clientId (Int32) : can be 0 or -1 if login unsuccessful.&#xD;&#xA;&#xD;&#xA;out-success (Boolean)" />
+                  <ui:Comment DisplayName="Invoke workflow: Login.xaml" sap:VirtualizedContainerService.HintSize="334,151" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Out args:&#xA;&#xA;out-clientId (Int32) : can be 0 or -1 if login unsuccessful.&#xA;&#xA;out-success (Boolean)" />
                 </Sequence>
               </State.Entry>
               <sap:WorkflowViewStateService.ViewState>
@@ -189,8 +189,8 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Comment DisplayName="Invoke workflow: GetPortfolioBasic.xaml" sap:VirtualizedContainerService.HintSize="363,171" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// In args:&#xD;&#xA;&#xD;&#xA;clientId (Int32)&#xD;&#xA;&#xD;&#xA;// Out args:&#xD;&#xA;&#xD;&#xA;out-portfolioBasicDt" />
-                          <ui:Comment DisplayName="Invoke workflow: GetRecommendationsBasic.xaml" sap:VirtualizedContainerService.HintSize="363,171" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// In args:&#xD;&#xA;&#xD;&#xA;clientId (Int32).&#xD;&#xA;&#xD;&#xA;// Out args:&#xD;&#xA;&#xD;&#xA;out-recommendationsBasicDt" />
+                          <ui:Comment DisplayName="Invoke workflow: GetPortfolioBasic.xaml" sap:VirtualizedContainerService.HintSize="363,171" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// In args:&#xA;&#xA;clientId (Int32)&#xA;&#xA;// Out args:&#xA;&#xA;out-portfolioBasicDt" />
+                          <ui:Comment DisplayName="Invoke workflow: GetRecommendationsBasic.xaml" sap:VirtualizedContainerService.HintSize="363,171" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// In args:&#xA;&#xA;clientId (Int32).&#xA;&#xA;// Out args:&#xA;&#xA;out-recommendationsBasicDt" />
                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainMenu workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Menus\InputDialog\MainMenu.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <OutArgument x:TypeArguments="x:Int32" x:Key="out_selection">[selection]</OutArgument>
@@ -229,17 +229,23 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.Condition>[selection.Equals(2)]</Transition.Condition>
                           <Transition.To>
-                            <State x:Name="__ReferenceID5" DisplayName="Portfolio" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_6">
+                            <State x:Name="__ReferenceID5" DisplayName="Portfolio" sap:VirtualizedContainerService.HintSize="422,1696" sap2010:WorkflowViewState.IdRef="State_6">
                               <State.Entry>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,534" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,1336" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box: TEMP" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Entered Portfolio State&quot;]" />
-                                  <ui:Comment DisplayName="Invoke workflow: ShowPortfolio.xaml" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// In args:&#xD;&#xA;&#xD;&#xA;in-portfolioBasicDt (DataTable)&#xD;&#xA;&#xD;&#xA;in-recommendationsBasicDt (DataTable)" />
-                                  <ui:Comment DisplayName="Invoke workflow BuySellKeep.xaml" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// In args:&#xD;&#xA;&#xD;&#xA;?&#xD;&#xA;&#xD;&#xA;// Out args:&#xD;&#xA;&#xD;&#xA;?" />
+                                  <ui:Comment DisplayName="Invoke workflow: GetPorfolioFull" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// In args:&#xD;&#xA;&#xD;&#xA;in-portfolioBasicDt&#xD;&#xA;&#xD;&#xA;// Out args:&#xD;&#xA;&#xD;&#xA;out-portfolioFullDt" />
+                                  <ui:Comment DisplayName="Invoke workflow: GetRecommendationsFull" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// In args:&#xA;&#xA;in-recommendationsBasicDt&#xA;&#xA;// Out args:&#xA;&#xA;out-recommendationsFullDt" />
+                                  <ui:Comment DisplayName="Invoke workflow: ShowPortfolio.xaml" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// In args:&#xA;&#xA;in-portfolioBasicDt (DataTable)&#xA;&#xA;in-recommendationsBasicDt (DataTable)" />
+                                  <ui:Comment DisplayName="Invoke workflow BuySellKeep.xaml" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// In args:&#xA;&#xA;?&#xA;&#xA;// Out args:&#xA;&#xA;?" />
+                                  <ui:Comment DisplayName="Invoke workflow: UpdatePortfolio" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Write your comments in the Text property" />
+                                  <ui:Comment DisplayName="Invoke workflow: UpdateRecommendations" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Write your comments in the Text property" />
+                                  <ui:Comment DisplayName="Invoke workflow: UpdatePurchaseHistory" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_12" Text="// Write your comments in the Text property" />
+                                  <ui:Comment DisplayName="Invoke workflow: EmailClient" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_13" Text="// Write your comments in the Text property" />
                                 </Sequence>
                               </State.Entry>
                               <sap:WorkflowViewStateService.ViewState>
@@ -286,8 +292,8 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box: TEMP" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Entered News State&quot;]" />
-                                  <ui:Comment DisplayName="Invoke workflow: GetNewsArticles.xaml " sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// In args: &#xD;&#xA;&#xD;&#xA;in-reccomendationBasicDt (DataTable) . &#xD;&#xA;&#xD;&#xA;// Out args:&#xD;&#xA;&#xD;&#xA;out-articlesJson (JSONObject)" />
-                                  <ui:Comment DisplayName="Invoke workflow: RenderNewsArticles.xaml" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// In args:&#xD;&#xA;&#xD;&#xA;in-articlesJson" />
+                                  <ui:Comment DisplayName="Invoke workflow: GetNewsArticles.xaml " sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// In args: &#xA;&#xA;in-reccomendationBasicDt (DataTable) . &#xA;&#xA;// Out args:&#xA;&#xA;out-articlesJson (JSONObject)" />
+                                  <ui:Comment DisplayName="Invoke workflow: RenderNewsArticles.xaml" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// In args:&#xA;&#xA;in-articlesJson" />
                                 </Sequence>
                               </State.Entry>
                               <sap:WorkflowViewStateService.ViewState>
