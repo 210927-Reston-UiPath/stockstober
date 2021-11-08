@@ -1,0 +1,63 @@
+## Clients
+----------------------------------------------------------
+id SERIAL PK,
+firstName VARCHAR(30),
+lastName VARCHAR(30),
+email VARCHAR(30),
+phoneNumber VARCHAR(30)
+
+- ^ Prefill with one default client with Clients.id = x, x=1.
+
+----------------------------------------------------------
+
+## ClientAccounts
+---
+clientId INTEGER FK REFERENCES Clients.id,
+username VARCHAR(30)
+password VARCHAR(30)
+
+- ^ Prefill with one default client with clientId = x, x=1.
+
+----------------------------------------------------------
+
+## Stocks
+---
+id SERIAL PK,
+tickerSymbol VARCHAR(30)
+
+- ^ Prefill with with info in Recommendations Source (Yahoo?) and Portfolio in Investopedia 
+
+----------------------------------------------------------
+
+## Portfolio
+---
+id SERIAL PK,
+clientId INTEGER FK REFERENCES Clients.id,
+stockId INTEGER FK REFERENCES Stocks.id,
+quantity INTEGER
+
+- ^ Prefill with with info in Portfolio in Investopedia
+
+----------------------------------------------------------
+
+## PurchaseHistory
+---
+id SERIAL PK,
+clientID INTEGER FK REFERENCES Clients.id,
+stockId INTEGER FK REFERENCES Stocks.id,
+quantity INTEGER,
+status VARCHAR(30),
+date VARCHAR(30),
+purchasePrice DOUBLE PRECISION
+
+- ^ Prefill with with info in Purchase History in Investopedia
+
+----------------------------------------------------------
+
+## Recommendations
+---
+id SERIAL PK,
+clientID INTEGER FK REFERENCES Clients.id,
+stockId INTEGER FK REFERENCES Stocks.id
+
+- ^ Prefill with with info in Recommendations Source (Yahoo?)
