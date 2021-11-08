@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio</title>
+	</head>
+	<body>
+		<div class="container">
+			<table>
+				<thead>
+					<tr>
+						<th>Stock Ticker</th>
+						<th>Enter Data</th>
+						<th>Submit</th>
+					</tr>
+				</thead>
+				<tbody>
+					{0}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
