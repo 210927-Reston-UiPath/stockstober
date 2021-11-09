@@ -2,30 +2,6 @@
   "Packages": [
     {
       "Package": {
-        "Id": "NewsAPI",
-        "Version": "0.6.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\newsapi/0.6.0\\lib/portable45-net45+win8+wpa81/NewsAPI.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll"
-      ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\newsapi\\0.6.0"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Database.Activities",
-        "Version": "1.4.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
-      ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities\\1.4.0"
-    },
-    {
-      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.9.5"
       },
@@ -140,7 +116,7 @@
         "C:\\Users\\mibax\\.nuget\\packages\\aforge/2.2.5\\lib/AForge.dll",
         "C:\\Users\\mibax\\.nuget\\packages\\aforge.imaging/2.2.5\\lib/AForge.Imaging.dll",
         "C:\\Users\\mibax\\.nuget\\packages\\aforge.math/2.2.5\\lib/AForge.Math.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\avalonedit/6.0.1\\lib/net45/ICSharpCode.AvalonEdit.dll",
         "C:\\Users\\mibax\\.nuget\\packages\\extended.wpf.toolkit/3.8.1\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
         "C:\\Users\\mibax\\.nuget\\packages\\extended.wpf.toolkit/3.8.1\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
         "C:\\Users\\mibax\\.nuget\\packages\\extended.wpf.toolkit/3.8.1\\lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
@@ -193,18 +169,42 @@
     },
     {
       "Package": {
-        "Id": "UiPath.WebAPI.Activities",
-        "Version": "1.6.0"
+        "Id": "NewsAPI",
+        "Version": "0.6.0"
       },
       "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\restsharp/106.3.1\\lib/net452/RestSharp.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities/1.6.0\\lib/net452/UiPath.Web.Activities.Design.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities/1.6.0\\lib/net452/UiPath.Web.Activities.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities/1.6.0\\lib/net452/UiPath.Web.dll"
+        "C:\\Users\\mibax\\.nuget\\packages\\newsapi/0.6.0\\lib/portable45-net45+win8+wpa81/NewsAPI.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll"
       ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.6.0"
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\newsapi\\0.6.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities\\1.4.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.WebAPI.Activities",
+        "Version": "1.9.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\mibax\\.nuget\\packages\\avalonedit/6.0.1\\lib/net45/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\restsharp/106.6.10\\lib/net452/RestSharp.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities/1.9.2\\lib/net461/UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities/1.9.2\\lib/net461/UiPath.Web.Activities.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities/1.9.2\\lib/net461/UiPath.Web.dll"
+      ],
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.9.2"
     }
   ],
   "Conflicts": [],
@@ -240,7 +240,7 @@
     },
     "AvalonEdit": {
       "Id": "AvalonEdit",
-      "Version": "5.0.3",
+      "Version": "6.0.1",
       "Dependencies": []
     },
     "BouncyCastle": {
@@ -519,6 +519,11 @@
         }
       ]
     },
+    "Microsoft.CSharp": {
+      "Id": "Microsoft.CSharp",
+      "Version": "4.7.0",
+      "Dependencies": []
+    },
     "Microsoft.Exchange.WebServices": {
       "Id": "Microsoft.Exchange.WebServices",
       "Version": "2.2.0",
@@ -684,7 +689,7 @@
     },
     "RestSharp": {
       "Id": "RestSharp",
-      "Version": "106.3.1",
+      "Version": "106.6.10",
       "Dependencies": []
     },
     "SharpZipLib": {
@@ -1113,11 +1118,15 @@
     },
     "UiPath.WebAPI.Activities": {
       "Id": "UiPath.WebAPI.Activities",
-      "Version": "1.6.0",
+      "Version": "1.9.2",
       "Dependencies": [
         {
           "Item1": "AvalonEdit",
-          "Item2": "[5.0.3, )"
+          "Item2": "[6.0.1, )"
+        },
+        {
+          "Item1": "Microsoft.CSharp",
+          "Item2": "[4.7.0, )"
         },
         {
           "Item1": "Newtonsoft.Json",
@@ -1125,7 +1134,7 @@
         },
         {
           "Item1": "RestSharp",
-          "Item2": "[106.3.1, )"
+          "Item2": "[106.6.10, )"
         }
       ]
     }
@@ -1164,12 +1173,12 @@
     {
       "Package": {
         "Id": "AvalonEdit",
-        "Version": "5.0.3"
+        "Version": "6.0.1"
       },
       "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\avalonedit\\5.0.3\\lib\\Net40\\ICSharpCode.AvalonEdit.dll"
+        "C:\\Users\\mibax\\.nuget\\packages\\avalonedit\\6.0.1\\lib\\net45\\ICSharpCode.AvalonEdit.dll"
       ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\avalonedit\\5.0.3"
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\avalonedit\\6.0.1"
     },
     {
       "Package": {
@@ -1409,6 +1418,16 @@
     },
     {
       "Package": {
+        "Id": "Microsoft.CSharp",
+        "Version": "4.7.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\mibax\\.nuget\\packages\\microsoft.csharp\\4.7.0\\lib\\net45\\_._"
+      ],
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\microsoft.csharp\\4.7.0"
+    },
+    {
+      "Package": {
         "Id": "Microsoft.Exchange.WebServices",
         "Version": "2.2.0"
       },
@@ -1584,12 +1603,12 @@
     {
       "Package": {
         "Id": "RestSharp",
-        "Version": "106.3.1"
+        "Version": "106.6.10"
       },
       "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\restsharp\\106.3.1\\lib\\net452\\RestSharp.dll"
+        "C:\\Users\\mibax\\.nuget\\packages\\restsharp\\106.6.10\\lib\\net452\\RestSharp.dll"
       ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\restsharp\\106.3.1"
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\restsharp\\106.6.10"
     },
     {
       "Package": {
@@ -1898,14 +1917,14 @@
     {
       "Package": {
         "Id": "UiPath.WebAPI.Activities",
-        "Version": "1.6.0"
+        "Version": "1.9.2"
       },
       "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.6.0\\lib\\net452\\UiPath.Web.Activities.Design.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.6.0\\lib\\net452\\UiPath.Web.Activities.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.6.0\\lib\\net452\\UiPath.Web.dll"
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.9.2\\lib\\net461\\UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.9.2\\lib\\net461\\UiPath.Web.Activities.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.9.2\\lib\\net461\\UiPath.Web.dll"
       ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.6.0"
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.webapi.activities\\1.9.2"
     }
   ]
 }

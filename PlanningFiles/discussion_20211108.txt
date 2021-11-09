@@ -1,0 +1,14 @@
+articlesDt:
+
+source
+date time
+
+
+Excel in Storage Bucket:
+- Portfolio Views
+- PurchaseViews
+
+
+news based on websites and categories
+
+recommendations depending on stock categories

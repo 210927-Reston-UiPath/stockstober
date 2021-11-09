@@ -1,0 +1,29 @@
+GetNewsArticles.xaml
+
+in_portfolioBasicDt {stockid, stockname, stocticker}
+in_recommendationsBasicDt {stockid, stockname, stocticker}
+
+out_
+
+---
+
+## System.DateTime and System.TimeSpan
+
+- https://docs.microsoft.com/en-us/dotnet/api/system.datetime.subtract?view=net-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.timespan.-ctor?view=net-6.0
+
+---
+https://newsapi.org/docs/get-started
+
+https://newsapi.org API key:
+aa53ad13fc634b97ab45239a2599f616
+
+GET requests:
+
+https://newsapi.org/v2/top-headlines?country=us&apiKey=API_KEY
+
+"https://newsapi.org/v2/top-headlines?q=" + stockName + "&country=us&from=" + diffLowerBoundStr + "&sortBy=publishedAt&apiKey=33488b4a9f0f4d58bc22a9b2a099b729"
+
+"https://newsapi.org/v2/everything?q=" + stockName + "&country=us&from=" + diffLowerBoundStr + "&sortBy=publishedAt&apiKey=33488b4a9f0f4d58bc22a9b2a099b729"
+
+"https://newsapi.org/v2/everything?q=" + stockName + "&from=" + todaysDateSTR + "&sortBy=publishedAt&apiKey=33488b4a9f0f4d58bc22a9b2a099b729"
