@@ -1,0 +1,11 @@
+Stocks
+
+- new columns:
+currentprice double precsion
+rsi double precsion
+mva50day double precsion
+mva100day double precsion
+macd50day double precsion
+macd100day double precsion
+pricechange50day double precsion
+pricechange100day double precsion
