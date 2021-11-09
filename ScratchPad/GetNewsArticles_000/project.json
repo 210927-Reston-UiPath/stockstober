@@ -3,7 +3,6 @@
   "description": "Contains GetNewsArticles.xaml\r\n\r\nArgs:\r\n---\r\nin_portfolioBasicDt : DataTable\r\n- Columns = {stockid, stockname, stocticker}\r\nin_recommendationsBasicDt : DataTable\r\n- Columns = {stockid, stockname, stocticker}\r\n\r\nout_{newsArticlesJSON or newsArticlesDt}",
   "main": "Main.xaml",
   "dependencies": {
-    "NewsAPI": "[0.6.0]",
     "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.Mail.Activities": "[1.9.5]",

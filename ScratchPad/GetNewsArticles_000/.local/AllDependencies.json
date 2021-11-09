@@ -563,18 +563,6 @@
           "lib/Microsoft.VisualStudio.OLE.Interop.dll": {}
         }
       },
-      "NewsAPI/0.6.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "10.0.3"
-        },
-        "compile": {
-          "lib/portable45-net45+win8+wpa81/_._": {}
-        },
-        "runtime": {
-          "lib/portable45-net45+win8+wpa81/NewsAPI.dll": {}
-        }
-      },
       "Newtonsoft.Json/11.0.2": {
         "type": "package",
         "compile": {
@@ -2590,18 +2578,6 @@
         "microsoft.visualstudio.ole.interop.nuspec"
       ]
     },
-    "NewsAPI/0.6.0": {
-      "sha512": "sS2W+VHUPT8pXmFla6GvESgTdnRcieSZsCcqCCu7IOSuqJotMERn8FXof/Y0F3m7ESMv5v3QHwuhMM514m35kA==",
-      "type": "package",
-      "path": "newsapi/0.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/portable45-net45+win8+wpa81/NewsAPI.dll",
-        "newsapi.0.6.0.nupkg.sha512",
-        "newsapi.nuspec"
-      ]
-    },
     "Newtonsoft.Json/11.0.2": {
       "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
@@ -3853,7 +3829,6 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "NewsAPI >= 0.6.0 <= 0.6.0",
       "UiPath.Database.Activities >= 1.4.0 <= 1.4.0",
       "UiPath.Excel.Activities >= 2.9.5 <= 2.9.5",
       "UiPath.Mail.Activities >= 1.9.5 <= 1.9.5",
@@ -3876,11 +3851,6 @@
     "frameworks": {
       "net461": {
         "dependencies": {
-          "NewsAPI": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[0.6.0, 0.6.0]"
-          },
           "UiPath.Database.Activities": {
             "include": "Runtime",
             "target": "Package",

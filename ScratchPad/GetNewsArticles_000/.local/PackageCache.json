@@ -2,6 +2,19 @@
   "Packages": [
     {
       "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
+        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities\\1.4.0"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.9.5"
       },
@@ -166,30 +179,6 @@
         "C:\\Users\\mibax\\.nuget\\packages\\uipath.vision/2.2.0\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.uiautomation.activities\\20.10.9"
-    },
-    {
-      "Package": {
-        "Id": "NewsAPI",
-        "Version": "0.6.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\newsapi/0.6.0\\lib/portable45-net45+win8+wpa81/NewsAPI.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll"
-      ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\newsapi\\0.6.0"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Database.Activities",
-        "Version": "1.4.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
-        "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
-      ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\uipath.database.activities\\1.4.0"
     },
     {
       "Package": {
@@ -656,16 +645,6 @@
       "Id": "Microsoft.VisualStudio.OLE.Interop",
       "Version": "7.10.6071",
       "Dependencies": []
-    },
-    "NewsAPI": {
-      "Id": "NewsAPI",
-      "Version": "0.6.0",
-      "Dependencies": [
-        {
-          "Item1": "Newtonsoft.Json",
-          "Item2": "[10.0.3, )"
-        }
-      ]
     },
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
@@ -1556,16 +1535,6 @@
         "C:\\Users\\mibax\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071\\lib\\Microsoft.VisualStudio.OLE.Interop.dll"
       ],
       "Path": "C:\\Users\\mibax\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071"
-    },
-    {
-      "Package": {
-        "Id": "NewsAPI",
-        "Version": "0.6.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\mibax\\.nuget\\packages\\newsapi\\0.6.0\\lib\\portable45-net45+win8+wpa81\\NewsAPI.dll"
-      ],
-      "Path": "C:\\Users\\mibax\\.nuget\\packages\\newsapi\\0.6.0"
     },
     {
       "Package": {

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>News Articles</title>
+		<style>
+			<!-- CSS rules here -->
+		</style>
+	</head>
+	<body>
+		{0}
+	</body>
+</html>
