@@ -58,13 +58,13 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID0}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="991,926" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID0}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="1031,986" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">0,2.5</av:Point>
-        <x:Double x:Key="StateContainerWidth">957</x:Double>
-        <x:Double x:Key="StateContainerHeight">890</x:Double>
+        <x:Double x:Key="StateContainerWidth">997</x:Double>
+        <x:Double x:Key="StateContainerHeight">950.5</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">60,40 90,40 90,55.5 110,55.5</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -235,7 +235,7 @@
                         <Transition DisplayName="Portfolio" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">417,390 896.7,390 896.7,789.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">417,390 936.7,390 936.7,889.5</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
                             </scg:Dictionary>
@@ -244,26 +244,20 @@
                           <Transition.To>
                             <State x:Name="__ReferenceID6" DisplayName="Portfolio" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_6">
                               <State.Entry>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,1396" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,573" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box: TEMP" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Entered Portfolio State&quot;]" />
-                                  <ui:Comment DisplayName="Invoke workflow: GetPorfolioFull" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// In args:&#xA;&#xA;in-portfolioBasicDt&#xA;&#xA;// Out args:&#xA;&#xA;out-portfolioFullDt" />
-                                  <ui:Comment DisplayName="Invoke workflow: GetRecommendationsFull" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// In args:&#xA;&#xA;in-recommendationsBasicDt&#xA;&#xA;// Out args:&#xA;&#xA;out-recommendationsFullDt" />
-                                  <ui:Comment DisplayName="Invoke workflow: ShowPortfolio.xaml" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// In args:&#xA;&#xA;in-portfolioFullDt (DataTable)&#xA;&#xA;in-recommendationsFullDt (DataTable)" />
-                                  <ui:Comment DisplayName="Invoke workflow BuySellKeep.xaml" sap:VirtualizedContainerService.HintSize="334,228" sap2010:WorkflowViewState.IdRef="Comment_7" Text="User Decides, based on what they were shown in previous sequences&#xA;&#xA;// In args:&#xA;&#xA;?&#xA;&#xA;// Out args:&#xA;&#xA;?" />
-                                  <ui:Comment DisplayName="Invoke workflow: UpdatePortfolio" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_10" Text="// Write your comments in the Text property" />
-                                  <ui:Comment DisplayName="Invoke workflow: UpdateRecommendations" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Write your comments in the Text property" />
-                                  <ui:Comment DisplayName="Invoke workflow: UpdatePurchaseHistory" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_12" Text="// Write your comments in the Text property" />
-                                  <ui:Comment DisplayName="Invoke workflow: EmailClient" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_13" Text="// Write your comments in the Text property" />
+                                  <ui:Comment DisplayName="Invoke: (Buy Sell Keep Decisions)" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_14" Text="// In args:&#xD;&#xA;&#xD;&#xA;?&#xD;&#xA;&#xD;&#xA;//Out args:&#xD;&#xA;&#xD;&#xA;out_decisionsDt" />
+                                  <ui:Comment DisplayName="Invoke workflow: RenderTradingView.xaml" sap:VirtualizedContainerService.HintSize="334,171" sap2010:WorkflowViewState.IdRef="Comment_6" Text="// In args:&#xA;&#xA;in_decisionsDt (DataTable)&#xD;&#xA;&#xD;&#xA;// Out args:&#xA;&#xA;out_tradesDt (DataTable)" />
                                 </Sequence>
                               </State.Entry>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">823,789.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">863,889.5</av:Point>
                                   <av:Size x:Key="ShapeSize">134,61</av:Size>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
@@ -272,7 +266,7 @@
                                 <Transition DisplayName="MainMenu" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_9">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:PointCollection x:Key="ConnectorLocation">856.5,789.5 856.5,405.25 417,405.25</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">896.5,889.5 896.5,405.25 417,405.25</av:PointCollection>
                                       <x:Int32 x:Key="SrcConnectionPointIndex">18</x:Int32>
                                       <x:Int32 x:Key="DestConnectionPointIndex">56</x:Int32>
                                     </scg:Dictionary>
@@ -285,50 +279,96 @@
                                 <Transition DisplayName="Auto Trade" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_10">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:PointCollection x:Key="ConnectorLocation">823,829.15 560.1,829.15 560.1,820.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">863,929.15 610.1,929.15 610.1,870.5</av:PointCollection>
                                       <x:Int32 x:Key="SrcConnectionPointIndex">49</x:Int32>
                                       <x:Int32 x:Key="DestConnectionPointIndex">51</x:Int32>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.To>
                                     <State x:Name="__ReferenceID7" DisplayName="AutoTrade" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_7">
+                                      <State.Entry>
+                                        <ui:Comment DisplayName="Invoke workflow BuySellKeep.xaml" sap:VirtualizedContainerService.HintSize="334,228" sap2010:WorkflowViewState.IdRef="Comment_15" Text="User Decides, based on what they were shown in previous sequences&#xA;&#xA;// In args:&#xA;&#xA;?&#xA;&#xA;// Out args:&#xA;&#xA;?" />
+                                      </State.Entry>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">473,759.5</av:Point>
+                                          <av:Point x:Key="ShapeLocation">523,809.5</av:Point>
                                           <av:Size x:Key="ShapeSize">134,61</av:Size>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <State.Transitions>
-                                        <Transition DisplayName="Email" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_11">
+                                        <Transition DisplayName="(Wrap Up)" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_11">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:PointCollection x:Key="ConnectorLocation">493.1,759.5 493.1,729.5 496.8,729.5 496.8,580.5</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">543.1,809.5 543.1,779.5 403.1,779.5 403.1,690.5</av:PointCollection>
                                               <x:Int32 x:Key="SrcConnectionPointIndex">10</x:Int32>
-                                              <x:Int32 x:Key="DestConnectionPointIndex">55</x:Int32>
+                                              <x:Int32 x:Key="DestConnectionPointIndex">11</x:Int32>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <Transition.To>
-                                            <State x:Name="__ReferenceID3" DisplayName="Email" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_8">
+                                            <State x:Name="__ReferenceID3" DisplayName="(Wrap Up)" sap:VirtualizedContainerService.HintSize="422,697" sap2010:WorkflowViewState.IdRef="State_10">
+                                              <State.Entry>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,337" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:Comment DisplayName="Invoke workflow: UpdatePortfolio" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_17" Text="// Write your comments in the Text property" />
+                                                  <ui:Comment DisplayName="Invoke workflow: UpdateRecommendations" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_18" Text="// Write your comments in the Text property" />
+                                                  <ui:Comment DisplayName="Invoke workflow: UpdatePurchaseHistory" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_19" Text="// Write your comments in the Text property" />
+                                                </Sequence>
+                                              </State.Entry>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">403,519.5</av:Point>
+                                                  <av:Point x:Key="ShapeLocation">383,629.5</av:Point>
                                                   <av:Size x:Key="ShapeSize">134,61</av:Size>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <State.Transitions>
-                                                <Transition DisplayName="MainMenu" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_12">
+                                                <Transition DisplayName="Email" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_14">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:PointCollection x:Key="ConnectorLocation">409.7,519.5 409.7,489.5 403.6,489.5 403.6,420.5</av:PointCollection>
-                                                      <x:Int32 x:Key="SrcConnectionPointIndex">2</x:Int32>
-                                                      <x:Int32 x:Key="DestConnectionPointIndex">71</x:Int32>
+                                                      <av:PointCollection x:Key="ConnectorLocation">429.9,629.5 429.9,599.5 440,599.5 440,550.5</av:PointCollection>
+                                                      <x:Int32 x:Key="SrcConnectionPointIndex">26</x:Int32>
+                                                      <x:Int32 x:Key="DestConnectionPointIndex">39</x:Int32>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <Transition.To>
-                                                    <x:Reference>__ReferenceID2</x:Reference>
+                                                    <State x:Name="__ReferenceID8" DisplayName="Email" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_8">
+                                                      <State.Entry>
+                                                        <ui:Comment DisplayName="Invoke workflow: EmailClient" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_20" Text="// Write your comments in the Text property" />
+                                                      </State.Entry>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">373,489.5</av:Point>
+                                                          <av:Size x:Key="ShapeSize">134,61</av:Size>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <State.Transitions>
+                                                        <Transition DisplayName="MainMenu" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_12">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:PointCollection x:Key="ConnectorLocation">379.7,489.5 379.7,459.5 403.6,459.5 403.6,420.5</av:PointCollection>
+                                                              <x:Int32 x:Key="SrcConnectionPointIndex">2</x:Int32>
+                                                              <x:Int32 x:Key="DestConnectionPointIndex">71</x:Int32>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Transition.To>
+                                                            <x:Reference>__ReferenceID2</x:Reference>
+                                                          </Transition.To>
+                                                          <Transition.Condition>
+                                                            <Literal x:TypeArguments="x:Boolean" Value="True" />
+                                                          </Transition.Condition>
+                                                        </Transition>
+                                                      </State.Transitions>
+                                                    </State>
                                                   </Transition.To>
+                                                  <Transition.Action>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Entering Email State&quot;]" />
+                                                  </Transition.Action>
                                                   <Transition.Condition>
                                                     <Literal x:TypeArguments="x:Boolean" Value="True" />
                                                   </Transition.Condition>
@@ -337,7 +377,7 @@
                                             </State>
                                           </Transition.To>
                                           <Transition.Action>
-                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[&quot;Entering Email State&quot;]" />
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[&quot;Entering (Wrap Up) State&quot;]" />
                                           </Transition.Action>
                                           <Transition.Condition>
                                             <Literal x:TypeArguments="x:Boolean" Value="True" />
@@ -356,34 +396,37 @@
                                 <Transition DisplayName="User Trade" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_13">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:PointCollection x:Key="ConnectorLocation">823,807.8 703.6,807.8 703.6,710.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">863,907.8 803.6,907.8 803.6,760.5</av:PointCollection>
                                       <x:Int32 x:Key="SrcConnectionPointIndex">21</x:Int32>
                                       <x:Int32 x:Key="DestConnectionPointIndex">71</x:Int32>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID8" DisplayName="UserTrade" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_9">
+                                    <State x:Name="__ReferenceID9" DisplayName="UserTrade" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_9">
+                                      <State.Entry>
+                                        <ui:Comment DisplayName="Invoke workflow BuySellKeep.xaml" sap:VirtualizedContainerService.HintSize="334,228" sap2010:WorkflowViewState.IdRef="Comment_16" Text="User Decides, based on what they were shown in previous sequences&#xA;&#xA;// In args:&#xA;&#xA;?&#xA;&#xA;// Out args:&#xA;&#xA;?" />
+                                      </State.Entry>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">583,649.5</av:Point>
+                                          <av:Point x:Key="ShapeLocation">683,699.5</av:Point>
                                           <av:Size x:Key="ShapeSize">134,61</av:Size>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <State.Transitions>
-                                        <Transition DisplayName="Email" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_14">
+                                        <Transition DisplayName="(Wrap Up)" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_15">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:PointCollection x:Key="ConnectorLocation">596.4,649.5 596.4,550 537,550</av:PointCollection>
-                                              <x:Int32 x:Key="SrcConnectionPointIndex">6</x:Int32>
-                                              <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
+                                              <av:PointCollection x:Key="ConnectorLocation">683,720.85 476.8,720.85 476.8,690.5</av:PointCollection>
+                                              <x:Int32 x:Key="SrcConnectionPointIndex">25</x:Int32>
+                                              <x:Int32 x:Key="DestConnectionPointIndex">55</x:Int32>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <Transition.To>
                                             <x:Reference>__ReferenceID3</x:Reference>
                                           </Transition.To>
                                           <Transition.Action>
-                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Entering Email State&quot;]" />
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;Entering (Wrap Up) State&quot;]" />
                                           </Transition.Action>
                                           <Transition.Condition>
                                             <Literal x:TypeArguments="x:Boolean" Value="True" />
@@ -493,8 +536,9 @@
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
-    <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
     <StateMachine.Variables>
       <Variable x:TypeArguments="x:Int32" Name="selection" />
       <Variable x:TypeArguments="x:Int32" Name="clientId" />
