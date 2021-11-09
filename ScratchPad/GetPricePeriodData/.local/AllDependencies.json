@@ -810,6 +810,47 @@
           "build/_._": {}
         }
       },
+      "UiPath.Database.Activities/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/_._": {}
+        },
+        "runtime": {
+          "lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll": {},
+          "lib/net452/UiPath.Database.Activities.Design.dll": {},
+          "lib/net452/UiPath.Database.Activities.dll": {},
+          "lib/net452/UiPath.Database.dll": {}
+        },
+        "resource": {
+          "lib/net452/fr/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/fr/UiPath.Database.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/fr/UiPath.Database.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ja/UiPath.Database.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ja/UiPath.Database.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/ru/UiPath.Database.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net452/ru/UiPath.Database.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net452/ru/UiPath.Database.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
       "UiPath.Excel.Activities/2.9.5": {
         "type": "package",
         "dependencies": {
@@ -2984,6 +3025,30 @@
         "uipath.nuspec"
       ]
     },
+    "UiPath.Database.Activities/1.4.0": {
+      "sha512": "NcuWj42NzxFqoA0tB6MPewAwTPpaifdGBTLQCS2KmFPIKMPl9t3dq5iAG63gOv/gJbKNItDjHBnsRT9Gjo3hJg==",
+      "type": "package",
+      "path": "uipath.database.activities/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "lib/net452/UiPath.Database.Activities.Design.dll",
+        "lib/net452/UiPath.Database.Activities.dll",
+        "lib/net452/UiPath.Database.dll",
+        "lib/net452/fr/UiPath.Database.Activities.Design.resources.dll",
+        "lib/net452/fr/UiPath.Database.Activities.resources.dll",
+        "lib/net452/fr/UiPath.Database.resources.dll",
+        "lib/net452/ja/UiPath.Database.Activities.Design.resources.dll",
+        "lib/net452/ja/UiPath.Database.Activities.resources.dll",
+        "lib/net452/ja/UiPath.Database.resources.dll",
+        "lib/net452/ru/UiPath.Database.Activities.Design.resources.dll",
+        "lib/net452/ru/UiPath.Database.Activities.resources.dll",
+        "lib/net452/ru/UiPath.Database.resources.dll",
+        "uipath.database.activities.1.4.0.nupkg.sha512",
+        "uipath.database.activities.nuspec"
+      ]
+    },
     "UiPath.Excel.Activities/2.9.5": {
       "sha512": "tx8DWPOzMeTq15wy6afo8u6dmD0y4XfQG49WsEKDEinysY8zJc1/92Rnf9tdlwng2SpWCJ6PTlDEpfU/SX1k3A==",
       "type": "package",
@@ -3492,6 +3557,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "UiPath.Database.Activities >= 1.4.0 <= 1.4.0",
       "UiPath.Excel.Activities >= 2.9.5 <= 2.9.5",
       "UiPath.Mail.Activities >= 1.9.5 <= 1.9.5",
       "UiPath.System.Activities >= 20.10.4 <= 20.10.4",
@@ -3512,6 +3578,11 @@
     "frameworks": {
       "net461": {
         "dependencies": {
+          "UiPath.Database.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.4.0, 1.4.0]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",

@@ -1,0 +1,10 @@
+id
+ticker
+mva50day
+mva100day
+macd50day
+macd100day
+pricechange50day
+pricechange100day
+
+select id, ticker, mva50day, mva100day, macd50day, macd100day, pricechange50day, pricechange100day from stocks;
