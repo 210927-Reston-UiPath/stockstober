@@ -1,0 +1,16 @@
+stock name | RSIDecision | MVADecision| MVAcurrentPriceDec | MACDDecision | PriceChangeDecision | currentPrice | Quantity |
+------------------------------------------------------------------------------------------------------
+AAPL	   | Buy	 | Sell	       | Sell	           |	 Sell	  | -2	 		|	       | USERINPUT| 
+.
+.
+.
+.
+.
+.
+
+
+
+
+[BUTTON : "Trade"] 
+
+[BUTTON : "Trade For Me"] 

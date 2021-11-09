@@ -1,4 +1,4 @@
-create table TradeBotDecisions(
+create table Decisions(
     id serial primary key, 
     stockName varchar(50),
     ticker varchar(50),

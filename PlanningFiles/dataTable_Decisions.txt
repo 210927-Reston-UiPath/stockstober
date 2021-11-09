@@ -1,0 +1,14 @@
+This is the 'Decision Matrix' computed by the Bot.
+
+- Columns
+
+"stockName" : String
+"ticker" : String
+"currentPrice" : Double
+"priceChangeDecsion" : String
+"rsiDesicion" : String
+"mvaDesicion" : String
+"mvaCurrentPriceDecision : String
+"macdDecision" : String
+
+The decision values = {"Buy", "Sell"}

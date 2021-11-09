@@ -35,29 +35,29 @@
 						</tr>
 					</thead>
 					<tbody>
-						{0}
+						<tr><td>Apple</td><td>AAPL</td><td>12.5</td><td>Buy</td><td>Sell</td><td>Sell</td><td>Sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-AAPL'></td></tr><tr><td>Microsoft</td><td>MSFT</td><td>528</td><td>Sell</td><td>Buy</td><td>Sell</td><td>Buy</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-MSFT'></td></tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
-		let dict = {1};
-		function customTrade(){{
-			for(let key in dict){{
+		let dict = {AAPL:0,MSFT:0};
+		function customTrade(){
+			for(let key in dict){
 				let value = document.getElementById("quantity-"+key).value;
-				if(isNaN(value)){{
+				if(isNaN(value)){
 					value = 0;
-				}}
+				}
 				dict[key] = Number(value);
-			}}
+			}
 			window.external.setResult(JSON.stringify(dict));
 			return true;
-		}};
-		function autoTrade(){{
+		};
+		function autoTrade(){
 			window.external.setResult("auto");
 			return true;
-		}}
+		}
 	</script>
 </body>
 </html>
