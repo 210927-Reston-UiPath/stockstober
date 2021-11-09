@@ -1,0 +1,13 @@
+create table TradeBotDecisions(
+    id serial primary key, 
+    stockName varchar(50),
+    ticker varchar(50),
+    currentPrice double precision null,
+    rsi double precision null,
+    mva50 double precision null,
+    mva100 double precision null,
+    macd50 double precision null,
+    macd100 double precision null,
+    priceChange50 double precision null,
+    priceChange100 double precision null
+);
