@@ -1,0 +1,19 @@
+- portfolioBasicDt:
+stockid
+stockname
+ticker
+
+
+- recommendationsBasicDt:
+stockid
+stockname
+ticker
+
+
+- RenderTradingView.xaml
+
+in_portfolioFullDt
+in_recommendationsFullDt
+
+out_tradeOrderDt
+{stockname, ticker, quantity}

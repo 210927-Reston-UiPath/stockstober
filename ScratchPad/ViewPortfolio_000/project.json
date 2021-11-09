@@ -1,14 +1,12 @@
 {
-  "name": "UserProcessSkeleton_001",
-  "description": "Skeleton/Architecture for UserProcess",
+  "name": "ViewPortfolio_000",
+  "description": "Sketch for producing a Custom Input with html showing Portfolio and Recommendation info, and allowing one to return buy/sell selections",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.System.Activities": "[20.10.4]",
-    "UiPath.UIAutomation.Activities": "[20.10.9]",
-    "UiPath.WebAPI.Activities": "[1.9.2]"
+    "UiPath.UIAutomation.Activities": "[20.10.9]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -45,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "1e72cc4b-cbbe-4507-8d55-0042a71f0be8",
+      "uniqueId": "c233954c-eac1-4bce-8e59-e948d7fbb9cf",
       "input": [],
       "output": []
     }
