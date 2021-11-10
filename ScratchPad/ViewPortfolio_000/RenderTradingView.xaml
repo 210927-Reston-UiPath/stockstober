@@ -1,12 +1,19 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="RenderTradingView" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="RenderTradingView" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_decisionsDt" Type="InArgument(sd:DataTable)" />
-    <x:Property Name="out_tradesDt" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_toBuyDt" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="out_toSellDt" Type="InArgument(sd:DataTable)" />
   </x:Members>
+  <this:RenderTradingView.out_toBuyDt>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:RenderTradingView.out_toBuyDt>
+  <this:RenderTradingView.out_toSellDt>
+    <InArgument x:TypeArguments="sd:DataTable" />
+  </this:RenderTradingView.out_toSellDt>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>775,3202</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>775,3975</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RenderTradingView_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -67,7 +74,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RenderTradingView" sap:VirtualizedContainerService.HintSize="785,3137" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RenderTradingView" sap:VirtualizedContainerService.HintSize="785,3870" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="template" />
       <Variable x:TypeArguments="x:String" Name="content" />
@@ -76,6 +83,7 @@
       <Variable x:TypeArguments="x:String" Name="result" />
       <Variable x:TypeArguments="njl:JObject" Name="tradesJson" />
       <Variable x:TypeArguments="x:String" Name="log" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tradesDt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -116,7 +124,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_decisionsDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="743,821" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_decisionsDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="743,822" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -249,24 +257,24 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ReadTextFile Content="[template]" DisplayName="Read Text File" FileName="Resources\tradeViewTemplate.txt" sap:VirtualizedContainerService.HintSize="743,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:ReadTextFile Content="[template]" DisplayName="Read Text File" FileName="Resources\tradeViewTemplate.txt" sap:VirtualizedContainerService.HintSize="743,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
     <ui:WriteTextFile DisplayName="Write Text File" FileName="Resources\tradeView.html" sap:VirtualizedContainerService.HintSize="743,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[String.Format(template, content, dict)]" />
-    <ui:CustomInput Height="{x:Null}" Width="{x:Null}" DisplayName="Custom Input" sap:VirtualizedContainerService.HintSize="743,86" sap2010:WorkflowViewState.IdRef="CustomInput_1" Result="[result]" URI="Resources\tradeView.html" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="743,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Result:&quot; + result]" />
-    <ui:BuildDataTable DataTable="[out_tradesDt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="743,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ticker&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:OutputDataTable DataTable="[out_tradesDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="743,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[log]" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="743,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[log]" />
-    <If Condition="[Not result.Equals(&quot;auto&quot;)]" sap:VirtualizedContainerService.HintSize="743,903" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:CustomInput Height="{x:Null}" Width="{x:Null}" DisplayName="Custom Input" sap:VirtualizedContainerService.HintSize="743,88" sap2010:WorkflowViewState.IdRef="CustomInput_1" Result="[result]" URI="Resources\tradeView.html" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="743,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Result:&quot; + result]" />
+    <ui:BuildDataTable DataTable="[tradesDt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="743,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ticker&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:OutputDataTable DataTable="[tradesDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="743,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[log]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="743,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[log]" />
+    <If Condition="[Not result.Equals(&quot;auto&quot;)]" sap:VirtualizedContainerService.HintSize="743,907" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="468,755" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="468,757" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="426,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[tradesJson]" JsonString="[result]" />
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="426,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[tradesJson.ToString]" />
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_decisionsDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,462" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="426,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[tradesJson.ToString]" />
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_decisionsDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,463" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -289,7 +297,7 @@
                             <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="sd:DataRow">[out_tradesDt.NewRow]</InArgument>
+                            <InArgument x:TypeArguments="sd:DataRow">[tradesDt.NewRow]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
@@ -311,7 +319,7 @@
                       </scg:List>
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
-                  <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[out_tradesDt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[tradesDt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEachRow.Body>
@@ -319,10 +327,69 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Robot will trade for you" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,62" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Robot will trade for you" />
       </If.Else>
     </If>
-    <ui:OutputDataTable DataTable="[out_tradesDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="743,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[log]" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="743,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[log]" />
+    <ui:OutputDataTable DataTable="[tradesDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="743,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[log]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="743,62" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[log]" />
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[tradesDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="743,682" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,533" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="quantity" />
+              <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[quantity]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(row("quantity"))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="sd:DataRow">[tradesDt.NewRow]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="sd:DataTable">[out_toBuyDt]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="sd:DataTable">[tradesDt.Clone]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="sd:DataTable">[out_toSellDt]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="sd:DataTable">[tradesDt.Clone]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <If Condition="[Not quantity.Equals(0)]" sap:VirtualizedContainerService.HintSize="484,210" sap2010:WorkflowViewState.IdRef="If_2" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
   </Sequence>
 </Activity>

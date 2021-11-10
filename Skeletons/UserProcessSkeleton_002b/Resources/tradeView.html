@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<input type="submit" value="Custom Trade" class="btn" id="btn-custom" onclick="customTrade()">
+			</div>
+			<div class="col-6">
+				<input type="submit" value="Auto Trade" class="btn" onclick="autoTrade()">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="form">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Ticker</th>
+							<th>Rsi Decision</th>
+							<th>mvacurrentpricedecision</th>
+							<th>mva50vs100decision</th>
+							<th>macd50vs100decision</th> 
+							<th>pricechange50vs100decision</th>
+							<th>Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>Boeing</td><td>BA</td><td>Buy</td><td>Buy</td><td>Sell</td><td>buy</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-BA'></td></tr><tr><td>Apple</td><td>AAPL</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-AAPL'></td></tr><tr><td>Tesla</td><td>TSLA</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-TSLA'></td></tr><tr><td>Microsoft</td><td>MSFT</td><td>Sell</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-MSFT'></td></tr><tr><td>Sony</td><td>SONY</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-SONY'></td></tr><tr><td>GameStop</td><td>GME</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-GME'></td></tr><tr><td>Virgin Galactic</td><td>SPCE</td><td>Sell</td><td>Sell</td><td>Sell</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-SPCE'></td></tr><tr><td>Honda</td><td>HMC</td><td>Sell</td><td>Sell</td><td>Sell</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-HMC'></td></tr><tr><td>Toyota</td><td>TM</td><td>Sell</td><td>Sell</td><td>Buy</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-TM'></td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let dict = {BA:0,AAPL:0,TSLA:0,MSFT:0,SONY:0,GME:0,SPCE:0,HMC:0,TM:0};
+		function customTrade(){
+			for(let key in dict){
+				let value = document.getElementById("quantity-"+key).value;
+				if(isNaN(value)){
+					value = 0;
+				}
+				dict[key] = Number(value);
+			}
+			window.external.setResult(JSON.stringify(dict));
+			return true;
+		};
+		function autoTrade(){
+			window.external.setResult("auto");
+			return true;
+		}
+	</script>
+</body>
+</html>
