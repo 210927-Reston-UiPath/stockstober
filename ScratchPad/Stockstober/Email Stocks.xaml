@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Email_Stocks" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,706.4" sap2010:WorkflowViewState.IdRef="Email_Stocks_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Email_Stocks" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,613.6" sap2010:WorkflowViewState.IdRef="Email_Stocks_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
@@ -51,7 +51,7 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Stocks" sap:VirtualizedContainerService.HintSize="425.6,601.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Stocks" sap:VirtualizedContainerService.HintSize="425.6,360" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="emailStocks" />
       <Variable x:TypeArguments="ui:Image" Name="Screenshot" />
@@ -62,24 +62,11 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadTextFile Content="[emailStocks]" DisplayName="Read Text File" FileName="Stocks Information.xlsx" sap:VirtualizedContainerService.HintSize="384,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot" sap:VirtualizedContainerService.HintSize="384,68.8" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[Screenshot]">
-      <ui:TakeScreenshot.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a7d7155f-635e-47e6-aa89-dffc727b751e">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:TakeScreenshot.Target>
-    </ui:TakeScreenshot>
-    <ui:SaveImage DisplayName="Save Image" FileName="Untitled.png" sap:VirtualizedContainerService.HintSize="384,92.8" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[Screenshot]" />
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[emailStocks.ToString]" DisplayName="Send SMTP Mail Message" Email="papolitoprince24@gmail.com" EnableSSL="True" From="papolitoprince24@gmail.com" sap:VirtualizedContainerService.HintSize="384,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Name="Papolito" Password="lastkiss 24" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Test" To="papolitoprince24@gmail.com">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Here is your transaction history for the stocks that you have bought from Investopedia.  Thank you for choicing us to help you monitor your stocks and also for choicing us to take care of anything related to your stocks.  We appreciate your paternage and look forward to taking care more of your needs for stocks hope to help you invest in the right companies and companies that you may have an interest in.  Thank you again and look forward to continue helping you with any transactions and we thank you for choicing Investopedia." DisplayName="Send SMTP Mail Message" Email="papolitoprince24@gmail.com" EnableSSL="True" From="papolitoprince24@gmail.com" sap:VirtualizedContainerService.HintSize="384,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Name="Papolito" Password="lastkiss 24" Port="587" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="Transaction History" To="papolitoprince24@gmail.com">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String">C:\Users\myron\OneDrive\Documents\UiPath\Stockstober\Untitled.png</Literal>
+            <Literal x:TypeArguments="x:String">C:\Users\myron\OneDrive\Documents\UiPath\Stockstober\Transaction HIstory test.html</Literal>
           </InArgument>
         </scg:List>
       </ui:SendMail.Files>

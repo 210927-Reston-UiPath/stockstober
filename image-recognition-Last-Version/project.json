@@ -3,10 +3,14 @@
   "description": "",
   "main": "Main.xaml",
   "dependencies": {
+    "Speech": "[1.0.7]",
+    "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.5.0]",
+    "UiPath.GoogleSpeech.Activities": "[0.1.6850.39757]",
+    "UiPath.Mail.Activities": "[1.12.2]",
     "UiPath.Python.Activities": "[1.4.1]",
     "UiPath.System.Activities": "[18.4.2]",
-    "UiPath.UIAutomation.Activities": "[18.4.3]"
+    "UiPath.UIAutomation.Activities": "[21.10.3]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -16,6 +20,7 @@
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [
@@ -24,7 +29,8 @@
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -50,5 +56,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

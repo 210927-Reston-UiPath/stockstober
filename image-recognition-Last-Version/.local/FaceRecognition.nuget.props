@@ -16,6 +16,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\hahme\.nuget\packages\newtonsoft.json\10.0.3</PkgNewtonsoft_Json>
+    <PkgUiPath_Mail_Activities Condition=" '$(PkgUiPath_Mail_Activities)' == '' ">C:\Users\hahme\.nuget\packages\uipath.mail.activities\1.12.2</PkgUiPath_Mail_Activities>
   </PropertyGroup>
 </Project>

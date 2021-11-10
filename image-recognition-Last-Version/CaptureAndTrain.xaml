@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>682,3968</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>689,3968</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -181,7 +181,7 @@
         </If>
       </Sequence>
     </DoWhile>
-    <Sequence DisplayName="Start capturing and training" sap:VirtualizedContainerService.HintSize="650,1261" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Start capturing and training" sap:VirtualizedContainerService.HintSize="478,1261" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -217,13 +217,13 @@
               <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="LoadScript_2" Result="[script]" ScriptFile="FaceRecognition\takePhoto.py" />
               <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" Instance="[script]" Name="takePhoto" Parameters="[{ cwd, name }]" Result="[obj]" />
               <p:GetObject x:TypeArguments="x:Int32" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="GetObject`1_1" PythonObject="[obj]" Result="[numPhotosTaken]" />
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Taken &quot; + numPhotosTaken.ToString + &quot; photos.&quot;]" TopMost="True" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Image being Processed!.&quot;]" TopMost="True" />
             </Sequence>
           </ActivityAction>
         </p:PythonScope.Body>
       </p:PythonScope>
       <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Log in succefull&quot;]" TopMost="True" />
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Login succesfull!&quot;]" TopMost="True" />
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,222" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,144" sap2010:WorkflowViewState.IdRef="Sequence_9">
