@@ -1,0 +1,42 @@
+To Do:
+- Reset the SQL Tables (Portfolio)
+- WrapUp State:
+	* UpdatePorfolio (buggy/wrong) (also consists of Recommendations table update)
+- Email State:
+	* GetTransactionHistory
+		- clientid: 1
+		- export to Excel sheet
+		- email the sheet to client
+		- html formatting
+- HTML views require some styling
+	* RenderNewsArticles needs image resizing
+- AutoBuy State:
+	* Use of decisionsDt to use BuyTrades and SellTrades
+- Login State:
+	* Login using Image Recognition, username, password
+- MainMenu State:
+	* MainMenu.xaml from /Menus/InputDialog/,
+		- REPLACE with: MainMenu.xaml from /Menus/SpeechRecognition/
+- CredentialAsset in Orchestrator for LoginInvestopedia
+- Set up ability to use Assistant or Orchestrator to run the Process
+- Set up ability to add/use LoginInvestopedia Library activity on/from Orchestrator
+
+
+
+TESTED:
+UpdateStocksPeriodData
+RSIDecision
+MovingAverageDecsion
+UpdateRsi
+MACDdecision
+MVA(50)vsMVA(100)Decision
+PriceChangeDecision
+UpdateCurrentPrices
+RenderTradesView
+LoginInvestopedia
+BuyTrade
+SellTrade
+
+hassan.baraka@revature.net, myron.princejr@revature.net, roderick.lewis@revature.net
+
+testStockDecisionTable
