@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>659,662</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>718,684</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetStockDecision_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -60,7 +60,7 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetStockDecision" sap:VirtualizedContainerService.HintSize="405,557" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetStockDecision" sap:VirtualizedContainerService.HintSize="405,619" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="connection" />
       <Variable x:TypeArguments="x:String" Name="log" />
@@ -72,9 +72,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetConnection workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\DataAccess\Sql\GetConnection.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connection">
-          <mva:VisualBasicReference x:TypeArguments="ui:DatabaseConnection" ExpressionText="connection" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connection">[connection]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[out_decisionsDt]" DisplayName="Execute Query" ExistingDbConnection="[connection]" sap:VirtualizedContainerService.HintSize="363,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select * from testStockDecisionTable">
@@ -82,6 +80,7 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
     </ui:ExecuteQuery>
+    <ui:DatabaseDisconnect DatabaseConnection="[connection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="363,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
     <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="id" DataTable="[out_decisionsDt]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="363,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
     <ui:OutputDataTable DataTable="[out_decisionsDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="363,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[log]" />
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="363,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[log]" />

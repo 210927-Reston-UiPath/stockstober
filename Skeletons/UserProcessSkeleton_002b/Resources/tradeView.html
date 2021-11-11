@@ -34,14 +34,14 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr><td>Boeing</td><td>BA</td><td>Buy</td><td>Buy</td><td>Buy</td><td>Buy</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-BA'></td></tr><tr><td>Apple</td><td>AAPL</td><td>Buy</td><td>Sell</td><td>Sell</td><td>Sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-AAPL'></td></tr>
+						<tr><td>Apple</td><td>AAPL</td><td>Sell</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-AAPL'></td></tr><tr><td>Tesla</td><td>TSLA</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-TSLA'></td></tr><tr><td>Microsoft</td><td>MSFT</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-MSFT'></td></tr><tr><td>Sony</td><td>SONY</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Sell</td><td><input type='number' class='input-number' id='quantity-SONY'></td></tr><tr><td>GameStop</td><td>GME</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-GME'></td></tr><tr><td>Virgin Galactic</td><td>SPCE</td><td>Sell</td><td>Sell</td><td>Sell</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-SPCE'></td></tr><tr><td>Honda</td><td>HMC</td><td>Sell</td><td>Sell</td><td>Sell</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-HMC'></td></tr><tr><td>Toyota</td><td>TM</td><td>Buy</td><td>Buy</td><td>Buy</td><td>sell</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-TM'></td></tr><tr><td>Boeing</td><td>BA</td><td>Buy</td><td>Buy</td><td>Sell</td><td>buy</td><td>Buy</td><td><input type='number' class='input-number' id='quantity-BA'></td></tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
-		let dict = {BA:0,AAPL:0};
+		let dict = {AAPL:0,TSLA:0,MSFT:0,SONY:0,GME:0,SPCE:0,HMC:0,TM:0,BA:0};
 		function customTrade(){
 			for(let key in dict){
 				let value = document.getElementById("quantity-"+key).value;

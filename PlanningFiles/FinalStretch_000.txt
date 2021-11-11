@@ -4,11 +4,12 @@
 	* Map email id to client
 - HTML views require some styling
 	* RenderNewsArticles needs image resizing
-{}- Login State:
+- Login State:
 	* Login using Image Recognition, username, password
-{}- MainMenu State:
+- MainMenu State:
 	* MainMenu.xaml from /Menus/InputDialog/,
 		- REPLACE with: MainMenu.xaml from /Menus/SpeechRecognition/
+- New State: Currency
 - CredentialAsset in Orchestrator for LoginInvestopedia
 - Set up ability to use Assistant or Orchestrator to run the Process
 - Set up ability to add/use LoginInvestopedia Library activity on/from Orchestrator
