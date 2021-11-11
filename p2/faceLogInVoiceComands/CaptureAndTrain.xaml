@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>689,3968</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>791,3558</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,10 +64,9 @@
       <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="692,3903" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="801,3493" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="name" />
       <Variable x:TypeArguments="x:String" Name="result" />
@@ -77,8 +76,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="650,1842" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[result.StartsWith(&quot;Success&quot;) = False]">
-      <Sequence sap:VirtualizedContainerService.HintSize="604,1678" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="759,1636" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[result.StartsWith(&quot;Success&quot;) = False]">
+      <Sequence sap:VirtualizedContainerService.HintSize="713,1472" sap2010:WorkflowViewState.IdRef="Sequence_7">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="credentials" />
           <Variable x:TypeArguments="x:String" Name="username">
@@ -97,16 +96,16 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <If Condition="[CheckWindowsCredentials]" sap:VirtualizedContainerService.HintSize="562,840" sap2010:WorkflowViewState.IdRef="If_5">
+        <If Condition="[CheckWindowsCredentials]" sap:VirtualizedContainerService.HintSize="671,780" sap2010:WorkflowViewState.IdRef="If_5">
           <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="526,660" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence sap:VirtualizedContainerService.HintSize="526,630" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:CustomInput DisplayName="Custom Input" sap:VirtualizedContainerService.HintSize="484,88" sap2010:WorkflowViewState.IdRef="CustomInput_1" Result="[credentials]" URI="login.html" />
-              <If Condition="[credentials = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,240" sap2010:WorkflowViewState.IdRef="If_4">
+              <If Condition="[credentials = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,210" sap2010:WorkflowViewState.IdRef="If_4">
                 <If.Then>
                   <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="No login credentials inputed." />
                 </If.Then>
@@ -130,13 +129,13 @@
             </Sequence>
           </If.Then>
         </If>
-        <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="562,706" sap2010:WorkflowViewState.IdRef="PythonScope_2" Path="[PythonPath]" TargetPlatform="x64">
+        <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="671,560" sap2010:WorkflowViewState.IdRef="PythonScope_2" Path="[PythonPath]" TargetPlatform="x64">
           <p:PythonScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,670" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,524" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="p:PythonObject" Name="script" />
                   <Variable x:TypeArguments="x:Int32" Name="numPhotosTaken" />
@@ -149,9 +148,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="LoadScript_3" Result="[script]" ScriptFile="FaceRecognition\takePhoto.py" />
-                <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="484,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" Instance="[script]" Name="checkCredentials" Parameters="[{ username, password, CheckWindowsCredentials }]" Result="[obj]" />
-                <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="484,80" sap2010:WorkflowViewState.IdRef="GetObject`1_2" PythonObject="[obj]" Result="[result]" />
-                <If Condition="[result.StartsWith(&quot;Success&quot;) = False]" sap:VirtualizedContainerService.HintSize="484,239" sap2010:WorkflowViewState.IdRef="If_3">
+                <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" Instance="[script]" Name="checkCredentials" Parameters="[{ username, password, CheckWindowsCredentials }]" Result="[obj]" />
+                <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="GetObject`1_2" PythonObject="[obj]" Result="[result]" />
+                <If Condition="[result.StartsWith(&quot;Success&quot;) = False]" sap:VirtualizedContainerService.HintSize="484,209" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
                     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[result]" TopMost="True" />
                   </If.Then>
@@ -162,8 +161,8 @@
         </p:PythonScope>
       </Sequence>
     </DoWhile>
-    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="650,628" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[name = &quot;&quot;]">
-      <Sequence sap:VirtualizedContainerService.HintSize="526,464" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="759,598" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[name = &quot;&quot;]">
+      <Sequence sap:VirtualizedContainerService.HintSize="526,434" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,14 +173,14 @@
             <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
           </ui:InputDialog.Result>
         </ui:InputDialog>
-        <If Condition="[name = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,240" sap2010:WorkflowViewState.IdRef="If_2">
+        <If Condition="[name = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,210" sap2010:WorkflowViewState.IdRef="If_2">
           <If.Then>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please input a name.&quot;]" TopMost="True" />
           </If.Then>
         </If>
       </Sequence>
     </DoWhile>
-    <Sequence DisplayName="Start capturing and training" sap:VirtualizedContainerService.HintSize="650,1261" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Start capturing and training" sap:VirtualizedContainerService.HintSize="759,1087" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,14 +194,14 @@
           <InArgument x:TypeArguments="x:String">[name.Trim]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="436,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[&quot;FaceRecognition\train_img\&quot; + name]" />
-      <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="436,526" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="[PythonPath]" TargetPlatform="x64">
+      <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[&quot;FaceRecognition\train_img\&quot; + name]" />
+      <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="436,410" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="[PythonPath]" TargetPlatform="x64">
         <p:PythonScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,374" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="p:PythonObject" Name="script" />
                 <Variable x:TypeArguments="x:Int32" Name="numPhotosTaken" />
@@ -215,8 +214,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="LoadScript_2" Result="[script]" ScriptFile="FaceRecognition\takePhoto.py" />
-              <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" Instance="[script]" Name="takePhoto" Parameters="[{ cwd, name }]" Result="[obj]" />
-              <p:GetObject x:TypeArguments="x:Int32" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="GetObject`1_1" PythonObject="[obj]" Result="[numPhotosTaken]" />
+              <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" Instance="[script]" Name="takePhoto" Parameters="[{ cwd, name }]" Result="[obj]" />
+              <p:GetObject x:TypeArguments="x:Int32" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetObject`1_1" PythonObject="[obj]" Result="[numPhotosTaken]" />
               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Image being Processed....&quot;]" TopMost="True" />
             </Sequence>
           </ActivityAction>

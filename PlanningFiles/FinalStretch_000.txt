@@ -1,20 +1,12 @@
-To Do:
-- Reset the SQL Tables (Portfolio)
-- WrapUp State:
-	* UpdatePorfolio (buggy/wrong) (also consists of Recommendations table update)
+## To Do:
 - Email State:
-	* GetTransactionHistory
-		- clientid: 1
-		- export to Excel sheet
-		- email the sheet to client
-		- html formatting
+	* Update Clients Email info (clientId:1 -> papolitoprince24@gmail.com)
+	* Map email id to client
 - HTML views require some styling
 	* RenderNewsArticles needs image resizing
-- AutoBuy State:
-	* Use of decisionsDt to use BuyTrades and SellTrades
-- Login State:
+{}- Login State:
 	* Login using Image Recognition, username, password
-- MainMenu State:
+{}- MainMenu State:
 	* MainMenu.xaml from /Menus/InputDialog/,
 		- REPLACE with: MainMenu.xaml from /Menus/SpeechRecognition/
 - CredentialAsset in Orchestrator for LoginInvestopedia
@@ -22,8 +14,18 @@ To Do:
 - Set up ability to add/use LoginInvestopedia Library activity on/from Orchestrator
 
 
+## DONE
 
-TESTED:
+AutoDecision
+UpdateClientBuys
+UpdateClientSells
+
+
+
+### TESTED:
+SendTransactionHistory
+GenerateTransactionHistoryHtml
+GetTransactionsHistory
 UpdateStocksPeriodData
 RSIDecision
 MovingAverageDecsion

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>603,4709</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>766,4837</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>UpdatePortfolio_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -71,18 +71,14 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UpdateClientBuys" sap:VirtualizedContainerService.HintSize="478,4604" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UpdateClientBuys" sap:VirtualizedContainerService.HintSize="478,4772" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="connection" />
       <Variable x:TypeArguments="sd:DataTable" Name="portfolioDt" />
       <Variable x:TypeArguments="x:String" Name="log" />
       <Variable x:TypeArguments="sd:DataTable" Name="stocksDt" />
       <Variable x:TypeArguments="sd:DataTable" Name="recommendationsDt" />
-      <Variable x:TypeArguments="x:String" Name="n">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.NewLine" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="[Environment.NewLine]" Name="n" />
       <Variable x:TypeArguments="sd:DataTable" Name="portfolioBuysDt" />
       <Variable x:TypeArguments="sd:DataTable" Name="recommendationsBuysDt" />
     </Sequence.Variables>
@@ -91,18 +87,29 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign: DUMMY" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Int32">[in_clientId]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">1</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:BuildDataTable DataTable="[in_toBuyDt]" DisplayName="Build DUMMY in_toBuyDt" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ticker&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;stockname&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;ticker&gt;MSFT&lt;/ticker&gt;&#xD;&#xA;    &lt;quantity&gt;1&lt;/quantity&gt;&#xD;&#xA;    &lt;stockname&gt;Microsoft&lt;/stockname&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;ticker&gt;GOOG&lt;/ticker&gt;&#xD;&#xA;    &lt;quantity&gt;1&lt;/quantity&gt;&#xD;&#xA;    &lt;stockname&gt;Google&lt;/stockname&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:OutputDataTable DataTable="[in_toBuyDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[log]" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,62" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[log]" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetConnection workflow" sap:VirtualizedContainerService.HintSize="436,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\DataAccess\Sql\GetConnection.xaml">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,492" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,414" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Assign: DUMMY" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[in_clientId]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:BuildDataTable DataTable="[in_toBuyDt]" DisplayName="Build DUMMY in_toBuyDt" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ticker&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;stockname&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;ticker&gt;MSFT&lt;/ticker&gt;&#xA;    &lt;quantity&gt;1&lt;/quantity&gt;&#xA;    &lt;stockname&gt;Microsoft&lt;/stockname&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;ticker&gt;GOOG&lt;/ticker&gt;&#xA;    &lt;quantity&gt;1&lt;/quantity&gt;&#xA;    &lt;stockname&gt;Google&lt;/stockname&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+          <ui:OutputDataTable DataTable="[in_toBuyDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[log]" />
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[log]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetConnection workflow" sap:VirtualizedContainerService.HintSize="436,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\DataAccess\Sql\GetConnection.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="connection">[connection]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -170,9 +177,7 @@
     <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ticker_1" DataTable="[portfolioBuysDt]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_2" />
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="portfolioBuysDt.Columns(&quot;quantity_1&quot;).ColumnName = &quot;portfolioQuantity&quot;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="436,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="portfolioBuysDt">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="portfolioBuysDt" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="portfolioBuysDt">[portfolioBuysDt]</InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:OutputDataTable DataTable="[portfolioBuysDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_8" Text="[log]" />

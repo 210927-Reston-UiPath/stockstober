@@ -14,5 +14,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgExtended_Wpf_Toolkit Condition=" '$(PkgExtended_Wpf_Toolkit)' == '' ">C:\Users\mibax\.nuget\packages\extended.wpf.toolkit\3.8.1</PkgExtended_Wpf_Toolkit>
+    <PkgUiPath_Mail_Activities Condition=" '$(PkgUiPath_Mail_Activities)' == '' ">C:\Users\mibax\.nuget\packages\uipath.mail.activities\1.12.2</PkgUiPath_Mail_Activities>
   </PropertyGroup>
 </Project>

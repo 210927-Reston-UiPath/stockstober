@@ -3,9 +3,11 @@
   "description": "Skeleton/Architecture for UserProcess",
   "main": "Main.xaml",
   "dependencies": {
+    "Speech": "[1.0.7]",
     "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.9.5]",
-    "UiPath.Mail.Activities": "[1.9.5]",
+    "UiPath.GoogleSpeech.Activities": "[0.1.6850.39757]",
+    "UiPath.Mail.Activities": "[1.12.2]",
     "UiPath.System.Activities": "[20.10.4]",
     "UiPath.UIAutomation.Activities": "[20.10.9]",
     "UiPath.WebAPI.Activities": "[1.9.2]"
