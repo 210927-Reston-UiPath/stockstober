@@ -1,0 +1,7 @@
+select * from Clients
+select * from ClientsLogin
+select * from ClientsInvestopediaSim
+select * from Stocks
+select * from Portfolio
+select * from Recommendations
+select * from testStockDecisionTable
