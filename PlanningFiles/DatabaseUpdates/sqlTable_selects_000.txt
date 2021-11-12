@@ -5,3 +5,8 @@ select * from Stocks
 select * from Portfolio
 select * from Recommendations
 select * from testStockDecisionTable
+
+
+select * from Portfolio
+inner join Stocks
+on Stock.id = Portfolio.stockid
