@@ -1,0 +1,42 @@
+select * from portfolio
+
+select clientid, stockid, stockname, ticker from Portfolio inner join Stocks on Stocks.id = Portfolio.stockid
+
+select Portfolio.id, clientid, stockid, stockname, ticker, quantity from Portfolio inner join Stocks on Stocks.id = Portfolio.stockid where clientid = 1
+
+update Portfolio set quantity = 12 where id = 5
+
+[update Portfolio set quantity = ? where id = ?]
+
+delete from Portfolio where clientid is null
+
+delete from Portfolio where id > 224
+
+[insert into Portfolio (clientid, stockid, quantity) values (?,?,?)]
+
+select * from recommendations
+
+create table Recommendations(
+id serial primary key,
+clientid integer references Clients(id),
+stockid integer references Stocks(id)
+)
+
+select clientid, stockid, stockname, ticker from Recommendations inner join Stocks on Stocks.id = Recommendations.stockid
+
+select Recommendations.id, clientid, stockid, stockname, ticker from Recommendations inner join Stocks on Stocks.id = Recommendations.stockid where clientid = 1
+
+insert into Recommendations (clientid, stockid)
+values (1, 10)
+
+[delete from Recommendations where id = ?]
+
+select * from stocks
+
+delete from Stocks where id > 22
+
+update Stocks set ticker = 'BA' where id = 9
+
+select * from testStockDecisionTable
+-----------------------
+

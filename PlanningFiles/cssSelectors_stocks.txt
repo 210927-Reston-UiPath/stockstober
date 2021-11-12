@@ -1,0 +1,25 @@
+.stockname
+.author
+.date
+.title
+.image
+.summary
+.content
+
+
+h1
+
+
+----------------------------------
+
+honda 7
+toyota 8
+boeing 9
+google 10
+facebook 11
+1	Apple 
+2	Tesla 
+3	Microsoft 
+4	Sony 
+5	GameStop
+6	Virgin Galactic
