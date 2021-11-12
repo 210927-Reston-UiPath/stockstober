@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		table, th, td {{
+  			border: 1px solid black;
+		}}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<input type="submit" value="Custom Trade" class="btn" id="btn-custom" onclick="customTrade()">
+			</div>
+			<div class="col-6">
+				<input type="submit" value="Auto Trade" class="btn" onclick="autoTrade()">
+			</div>
+			<h1>Decisions</h1>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="form">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Ticker</th>
+							<th>RSI</th>
+							<th>MVA Current Price</th>
+							<th>MVA50 vs MVA100</th>
+							<th>MACD50 vs MACD100</th> 
+							<th>Price Change 50 vs 100</th>
+							<th>Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						{0}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let dict = {1};
+		function customTrade(){{
+			for(let key in dict){{
+				let value = document.getElementById("quantity-"+key).value;
+				if(isNaN(value)){{
+					value = 0;
+				}}
+				dict[key] = Number(value);
+			}}
+			window.external.setResult(JSON.stringify(dict));
+			return true;
+		}};
+		function autoTrade(){{
+			window.external.setResult("auto");
+			return true;
+		}}
+	</script>
+</body>
+</html>
