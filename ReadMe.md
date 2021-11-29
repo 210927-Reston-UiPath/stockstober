@@ -54,7 +54,6 @@ In a modern busy lifestyle, users often spend time doing simple tasks that can b
 - Postgres SQL database.
 - ML/AI librarires: TenserFlow.
 - VS code.
--
 
 ## Flowchart
 
