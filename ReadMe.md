@@ -45,6 +45,16 @@ In a modern busy lifestyle, users often spend time doing simple tasks that can b
 - Image Recognition for Client Account Creation.
 - Image Recognition for Client Login.
 - Voice Recognition as the User Interface for the Client to interact with the Robot (for the Client-Robot Interaction features mentioned above).
+## Tech Stack
+- UiPath Studio.
+- State machine.
+- HTTP requests.
+- Google voice API.
+- Python Invoke Code.
+- Postgres SQL database.
+- ML/AI librarires: TenserFlow.
+- VS code.
+-
 
 ## Flowchart
 
